@@ -30,4 +30,4 @@ def books():
         {"id": 5, "title": "Book 5"},
         {"id": 6, "title": "Book 6"},
     ]
-    return render_template("books.html")
+    return render_template("books.html", books=books) # Pass the books var to the page
