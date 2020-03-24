@@ -3,13 +3,13 @@
 
 '''Minimal flask app'''
 
-from flask import Flask
+from flask import Flask, render_template
 
 # Make the application
 app = Flask(__name__) # Because I've imported Flask up top, I can use it here
 
 # Make the rout
-@app.route("/")
+@app.route("/") # HOME PAGE
 
 # Define a function
 def hello():
@@ -23,4 +23,11 @@ def hello():
 # SERVER CODES:
 #   
 ###################################################################
+
+# A second page
+@app.route("/about")
+
+# Make a function that goes with the route "about"
+def preds():
+    return render_template('about.html')
 
