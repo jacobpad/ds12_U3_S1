@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Book Form</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block content %}
+
     <h1>New Book Form</h1>
 
     <a href="/books">book page</a>
     
     <p>Use The Book Form To Create New Books</p>
 
-    <form action="/books/create" method="POST">
+    <!-- not needed because we're using the layout -->
+    <!-- <form action="/books/create" method="POST"> -->
 
         <label>Title:</label>
         <input type="text" name="title" placeholder="Pretend Book">
@@ -27,5 +24,4 @@
         <button>Submit</button>
     </form>
 
-</body>
-</html>
+{% endblock %}

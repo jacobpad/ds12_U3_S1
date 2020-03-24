@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block content %}
+
     <h1>Book Listings</h1>
     <h2>Welcome</h2>
     <h3>Here you will find a listing of books</h3>
 
-    <a href="books/new">Visit New Books Form Page To Insert New Books</a>
+    <!-- Don't need this link witht the `extends layout` stuff going on -->
+    <!-- <a href="books/new">Visit New Books Form Page To Insert New Books</a> -->
 
     {% if books %}
         <ul>
@@ -22,6 +19,4 @@
     {% else %}
         <p>Books not found.</p>
     {% endif %}
-
-</body>
-</html>
+{% endblock %}
